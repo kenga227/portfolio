@@ -1,0 +1,317 @@
+h2 {
+    text-align: center;
+    padding-top: 15vw;
+    color: black;
+    font-size: 28px;
+}
+
+p{
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 8vw;
+    font-size: 22px;
+    
+}
+
+
+header {
+    grid-area: header-area;
+}
+
+#first {
+    grid-area: main-area;
+}
+
+#next {
+    grid-area: next-area;
+}
+
+#other {
+    grid-area: other-area;
+    background-color: white;
+}
+
+
+
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  z-index: 99;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 25px;
+  width: 60px;
+  font-weight: 600;
+}
+
+#myBtn:hover {
+  background-color: black;
+    color: white;
+}
+  
+
+.digital {
+    width: 92%;
+    height: auto;
+    padding-bottom: 6px;
+    padding-top: 2vw;
+    padding-left: 2vw
+}
+
+body
+{
+  margin: 10px;
+  padding: 10px;
+  background: black;
+  color: white;
+  font-family: "Helvetica Neue";
+}
+
+a
+{
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: gray;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:1;
+    
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  text-align: center;
+  align-content: center;
+  z-index: 1;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; 
+  z-index: 2; 
+  
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: white;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: fixed;
+  width: 95%;
+  margin: -100px 0 0 -70px;
+  padding: 50px;
+  padding-top: 100px;
+  background: rgba(255, 255, 255, 0.97);
+    text-align: left;
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+    margin-top: 3%;
+  font-size: 25px;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+section {
+  height: 100vh;
+  width: 100%;
+
+  
+}
+
+
+.glitch {
+  font-size: 17vw;
+  line-height: 1;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-decoration: none;
+  color: #fff;
+    cursor: pointer;
+  }
+ .glitch:before{
+    display: block;
+    content: 'DIGITAL KENGA';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .8;
+     color: #0ff;
+    z-index: -1;
+  }
+  .glitch:after {
+    color: #f0f;
+    z-index: -2;
+    display: block;
+    content: 'DIGITAL KENGA';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .8;
+  }
+  
+  .glitch:hover:before {
+      animation: glitch 12s cubic-bezier(.25, .46, .45, .94) both infinite
+    }
+    .glitch:hover:after {
+      animation: glitch 12s cubic-bezier(.25, .46, .45, .94) reverse both infinite
+    }
+  
+
+@keyframes glitch {
+    0% {
+        transform: translate(0)
+    }
+    20% {
+        transform: translate(-5px, 5px)
+    }
+    40% {
+        transform: translate(-5px, -5px)
+    }
+    60% {
+        transform: translate(5px, 5px)
+    }
+    80% {
+        transform: translate(5px, -5px)
+    }
+    to {
+        transform: translate(0)
+    }
+}
+
+
+
+
+
+
+
+@media only screen and (min-width : 640px) {
+
+    #menu {
+        text-align: center;
+        align-content: center;
+    }
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "header-area  header-area"
+        "main-area  main-area"
+        "next-area  other-area";
+}
+    h2 {
+    text-align: center;
+    padding-top: 8vw;
+    color: black;
+    font-size: 36px;
+}
+
+p{
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 8vw;
+    font-size: 26px;
+    
+}
